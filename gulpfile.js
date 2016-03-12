@@ -7,8 +7,8 @@ var gulp        = require('gulp'),
 
     // stylus
     stylus      = require('gulp-stylus'),
-	rupture     = require('rupture'),
-	prefixer    = require('autoprefixer-stylus'),
+  	rupture     = require('rupture'),
+  	prefixer    = require('autoprefixer-stylus'),
     nib         = require('nib'),
 
     // images
@@ -20,7 +20,11 @@ var messages = {
 
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--drafts', '--quiet', '--config', '_config.yml,_config_dev.yml'], {stdio: 'inherit'}).on('close', done);
+
+    return cp.spawn('bundle',
+      ['exec', 'jekyll', 'build', '--drafts', '--quiet', '--config', '_config.yml,_config_dev.yml'],
+      {stdio: 'inherit'}
+   ).on('close', done);
     // return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'}).on('close', done);
 });
 
