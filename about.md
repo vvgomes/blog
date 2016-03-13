@@ -7,22 +7,13 @@ permalink: /about/index.html
 
 # Vinicius Gomes
 
-I'm a professional software developer since 2007.
+I’m a software developer working professionally since 2007 - the year in which I got my Computer Science degree from [UFPel](http://portal.ufpel.edu.br/en/) University. Currently, I'm working at [ThoughtWorks Inc.](https://www.thoughtworks.com/)
 
-## Skills
+In my career so far, I’ve worked mainly in the development of web-based applications. That gave me experience in a variety of technologies, specially Ruby, Java, Javascript, and popular libraries and frameworks for those languages.
 
-* HTML - Jade - Haml - Erb
-* Responsive (Mobile First)
-* CSS (Stylus, Sass, Less)
-* Css Frameworks (Bootstrap, Foundation)
-* Javascript (Design Patterns, Testes)
-* NodeJS
-* AngularJS - ReactJS
-* Grunt - Gulp - Yeoman
-* Git
-* PHP
-* Python
-* MySQL - MongoDB
-* Scrum and Kanban
-* TDD e Continuous Integration
+My current technical focus is both on Functional Programming and on mobile development (with both hybrid frameworks and native platforms). Besides that, I’m also interested in recruiting activities as well as coaching new developers at ThoughtWorks.
+
+I was born in the south of Brazil and I’m currently living and working in the US east region.
+
+Feel free to [send me a message](mailto:me@vvgomes.com) anytime.
 
