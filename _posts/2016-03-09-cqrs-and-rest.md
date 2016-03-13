@@ -3,7 +3,6 @@ title: "CQRS & REST"
 layout: post
 date: 2016-03-09 22:44
 tag:
-- programming
 - cqrs
 - rest
 blog: true
@@ -44,7 +43,7 @@ When it comes to exposing a REST-like API, it is important that a CQRS applicati
 
 In the example above, all the possible commands that can be sent in the context of a given resource (`/orders/{id}`) are available as a nested resource collection (`/commands`). 
 
-## Verbs
+# Verbs
 
 One caveat that might sound a little odd is the fact that the command URI contains the command name - which is usually a **verb** denoting an action to be performed on the parent entity. In some extent, that differs from regular REST where resources are always named after nouns and stateful operations on them are always performed by using the standard HTTP methods (POST, PUT, PATCH, DELETE).
 
@@ -58,7 +57,7 @@ In the proposed approach however, the point of view is slightly different: inste
 
 That gives us the flexibility of defining custom commands as well as making it easy to API clients to discover them, as the command name is part of the URI. Additionally, commands are preferably asynchronous operations, so that the result of the request above would ideally be a 202 (Accepted). Sometimes it is also useful to return a unique id for newly created resources or command status.
 
-## Embedded Commands
+# Embedded Commands
 
 In many cases, it'd be useful for API clients to request a resource and get back the command list as part of the response, like this: 
 
@@ -100,14 +99,7 @@ That would make possible for a Javascript client, for instance, to build an UI l
   </ul>
 {% endhighlight %}
 
-## Conclusion
+# Conclusion
 
 CQRS provides you with a flexible way to build scalable asyncronous systems, specially when combined with [event sourcing](http://www.martinfowler.com/eaaDev/EventSourcing.html). Addopting REST over HTTP as the delivery mechanism can be tricky in that context. The model described above is one way to do accomplish the combination of the two techniques. Let me know in case you have alternative ideas.
 
-
-[1]: http://daringfireball.net/projects/markdown/
-[2]: http://www.fileformat.info/info/unicode/char/2163/index.htm
-[3]: http://www.markitdown.net/
-[4]: http://daringfireball.net/projects/markdown/basics
-[5]: http://daringfireball.net/projects/markdown/syntax
-[6]: http://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg
