@@ -13,7 +13,7 @@ In my career so far, I’ve worked mainly in the development of web-based applic
 
 My current technical focus is both on Functional Programming and on mobile development (with both hybrid frameworks and native platforms). Besides that, I’m also interested in recruiting activities as well as coaching new developers at ThoughtWorks.
 
-I was born in the south of Brazil and I’m currently living and working in the US east region.
+I was born and raised in the south of Brazil and I’m currently living and working in the US east region.
 
 Feel free to [send me a message](mailto:me@vvgomes.com) anytime.
 
