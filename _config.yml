@@ -1,6 +1,6 @@
 # main text of home
 name: Vinicius Gomes
-bio: 'Software Engineer'
+bio: 'Software Developer'
 
 # if it's an external image, update below for true
 external-image: false
@@ -24,13 +24,8 @@ github: vvgomes
 twitter: vvgomes
 linkedin: vvgomes
 email: me@vvgomes.com
-#facebook: myfacebook
-# google: mygoogle
-# instagram: myinstagram
-# pinterest: mypinterest
+instagram: vvgomes
 # youtube: myyoutube
-#spotify: myspotify
-#medium: medium
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
