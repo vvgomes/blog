@@ -3,8 +3,9 @@ title: "CQRS & REST"
 layout: post
 date: 2016-03-09 22:44
 tag:
-- markdown
-- elements
+- programming
+- cqrs
+- rest
 blog: true
 ---
 
