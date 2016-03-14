@@ -7,7 +7,7 @@ permalink: /about/index.html
 
 # Vinicius Gomes
 
-I’m a software developer working professionally since 2007 - the year in which I got my Computer Science degree from [UFPel](http://portal.ufpel.edu.br/en/) University. Currently, I'm working at [ThoughtWorks Inc.](https://www.thoughtworks.com/)
+I’m a software developer working professionally since 2007 - the year in which I got my Computer Science degree from [UFPel](http://portal.ufpel.edu.br/en/) University. Currently, I'm working at [ThoughtWorks](https://www.thoughtworks.com/)
 
 In my career so far, I’ve worked mainly in the development of web-based applications. That gave me experience in a variety of technologies, specially Ruby, Java, Javascript, and popular libraries and frameworks for those languages.
 
