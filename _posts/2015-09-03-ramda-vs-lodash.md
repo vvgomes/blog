@@ -13,6 +13,7 @@ Javascript is almost certainly the most popular functional programming language 
 Most people I know would adopt [Underscore](http://underscorejs.org/) or [Lodash](https://lodash.com/) in that case. However, after reading the [Mostly Adequate Guide to Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide) and watching the “[Hey Underscore, You're Doing It Wrong!](https://www.youtube.com/watch?v=m3svKOdZijA)” talk by Brian Lonsdorf, I decided to give [Ramda](http://ramdajs.com/) a try in my last project.
 
 The main advantages of Ramda, in my opinion, are the following:
+
 - All Ramda functions are auto-curried;
 - No side effects are allowed, unless you do it manually;
 - The API for lists favors point-free code;
