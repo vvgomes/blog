@@ -3,8 +3,8 @@ title: Clojure Flip
 layout: post
 date: 2016-02-08 22:48
 tag:
-- people
-- society
+- functional-programming
+- clojure
 blog: true
 ---
 
