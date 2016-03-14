@@ -49,7 +49,7 @@ One caveat that might sound a little odd is the fact that the command URI contai
 
 In CQRS, though, the standard HTTP methods are not flexible enough to represent all possible commands associated to an entity. The example above demonstrates that: an existing *order* can be *placed*, *canceled*, or *modified*. In traditional REST style, these operations would end up being performed by sending a PUT (or PATCH) request to the *order* resource, which results in not enough context to identify the user intent.
 
-In the proposed approach however, the point of view is slightly different: instead of modifying the `/orders/{id}` resource, we would "send a new command" using POST with a command URI and a (optinal) request body. Like this:
+In the proposed approach however, the point of view is slightly different: instead of modifying the `/orders/{id}` resource, we would "send a new command" using POST with a command URI and a (optional) request body. Like this:
 
 {% highlight bash %}
   POST /orders/de305d54-75b4-431b-adb2-eb6b9e546014/commands/place
@@ -67,7 +67,7 @@ In many cases, it'd be useful for API clients to request a resource and get back
 
 {% highlight json %}
   {
-    "created_at": "2016",
+    "created_at": "2016-02-01",
     "status": "opened",
     "links": [ ],
     "commands": [
