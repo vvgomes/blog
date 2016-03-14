@@ -11,7 +11,7 @@ I’m a software developer working professionally since 2007 - the year in which
 
 In my career so far, I’ve worked mainly in the development of web-based applications. That gave me experience in a variety of technologies, specially Ruby, Java, Javascript, and popular libraries and frameworks for those languages.
 
-My current technical focus is both on Functional Programming and on Mobile Application Development (both hybrid frameworks and native platforms). Besides that, I’m also interested in recruiting activities as well as coaching new developers at ThoughtWorks.
+My current technical focus is both on Functional Programming and on Mobile Application Development (either hybrid frameworks or native platforms). Besides that, I’m also interested in recruiting activities as well as coaching new developers at ThoughtWorks.
 
 I was born and raised in the south of Brazil and I’m currently living and working in the US east region.
 
