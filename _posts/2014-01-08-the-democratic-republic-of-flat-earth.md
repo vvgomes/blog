@@ -25,6 +25,6 @@ Overall, the assumption of collective wisdom and method-free political discussio
 
 > Collective wisdom, alas, is no adequate substitute for the intelligence of individuals. Individuals who opposed received opinions have been the source of all progress, both moral and intellectual. They have been unpopular, as was natural. Socrates, Christ, and Galileo all equally incurred the censure of the orthodox.
 
-Many of the social innovators throughout the history, as Russell mentions above, were representatives of minorities and they have been usually rejected by the common sense. In the modern times, this scenario can be as well observed quite frequently. Freedom from slavery, feminism, gay rights, freedom of creed are examples of complex struggles minorities fought.
+Many of the social innovators throughout the history, as Russell mentions above, were representatives of minorities and they have been usually rejected by the common sense. In the modern times, this scenario can be as well observed quite frequently. Freedom from slavery, feminism, gay rights, freedom of creed are examples of complex struggles minorities fight.
 
 Given those problems, how a more reasonable social system would look like? In my [previous post](http://vvgomes.com/democracia-nao-funciona/), I’ve already proposed **consensus** as an alternative to democracy, giving the Scientific Community as a success case of it. Could you think of other alternatives or improvements on the current state of affairs in democratic nations?
