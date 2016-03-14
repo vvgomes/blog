@@ -31,7 +31,7 @@ Well, even though both sides have their valid points, they are not really talkin
 
 But turns out the second approach can be simpler on **maintenance**, since it gives more information about what’s going on without exposing implementation details. Also it requires less mental mapping between the computational representation and the real world thing (it’s closer to the natural language).
 
-# Conclusion
+## Conclusion
 
 Overall, if our goal is to get something working as fast as we can using a very simple approach to **create** stuff, investing in old-fashioned function calls works fine. However, if the intention is to build something that would be easier and faster to understand and, consequently, **maintain**, the fluent approach sounds better.
 

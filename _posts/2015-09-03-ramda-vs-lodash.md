@@ -22,6 +22,6 @@ The example bellow shows these Ramda capabilities in a direct comparison with th
 
 {% gist vvgomes/451ea5ca2c65e87c92e4 %}
 
-# Conclusion
+## Conclusion
 
 In the context of ECMA5 Javascript, I feel like Ramda leads to more declarative code with less implicit side-effects. The fact you less frequently need to explicit mention your data and you don’t need to declare anonymous functions everywhere definitely reduces the amount of noise in your code and makes it fairly cheaper to maintain.

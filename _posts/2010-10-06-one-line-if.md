@@ -112,7 +112,7 @@ function lose() {
 
 Now, as you can see, the whole code has only one-line `if`s, and the intention behind each conditional path is explicitly named. As well as giving a better reading, we have improved the maintenance by giving a very clear place for each chunk of work. For instance, if you need to change the win behaviour, you just go directly to the win function and do your changes.
 
-# Conclusion
+## Conclusion
 
 I believe that by using one-line `if`s you can make your code more [literate](https://en.wikipedia.org/wiki/Literate_programming) and descriptive, allowing readers get the overall picture at first and get deeper in details only if they need. Compare the above version of the whole code with the first single `guess` function. Note that in the last version the reading flows more naturally, as if the code was telling you a story.
 
