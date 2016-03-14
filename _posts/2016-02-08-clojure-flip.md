@@ -13,7 +13,7 @@ Recently, I found myself in need of a [flip](http://hackage.haskell.org/package/
 {% highlight clojure %}
 (defn flip [f]
   (comp (partial apply f) reverse list))
-{% end highlight %}
+{% endhighlight %}
 
 Its behavior can be described like this (assuming [Midje](https://github.com/marick/Midje)):
 
@@ -23,6 +23,6 @@ Its behavior can be described like this (assuming [Midje](https://github.com/mar
   ((flip /) 1 2) => 2
   ((flip >) 1 2) => true
   ((flip str) 'foo 'bar 'baz) => "bazbarfoo")
-{% end highlight %}
+{% endhighlight %}
 
 Please, let me know in case you have a simpler solution ;)
