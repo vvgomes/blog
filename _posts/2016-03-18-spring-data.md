@@ -120,7 +120,9 @@ After that,  we've implemented each of the necessary filters and sorting as stat
 
 Without getting too deep in details about `root`, `query`, `cb` (criteria builder), what our new methods do is to return reusable specifications. And that should be enough to allow us to replace calls for
 
-`findByFirstNameAndLastNameAndBirthDateIsLessThanAndStatusInOrderByEnrollmentDesc`
+{% highlight bash %}
+findByFirstNameAndLastNameAndBirthDateIsLessThanAndStatusInOrderByEnrollmentDesc
+{% endhighlight %}
 
 with the following code:
 
