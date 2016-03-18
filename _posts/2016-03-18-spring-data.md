@@ -1,5 +1,5 @@
 ---
-title: "JPA Specifications"
+title: "Spring Data Repositories considered Awkward"
 layout: post
 date: 2016-03-18 11:00
 tag:
