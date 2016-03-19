@@ -27,8 +27,7 @@ public class Customer {
 public enum FinancialStatus {
   GOOD_STANDING,
   DEBT,
-  BANKRUPT,
-  DECEASED
+  BANKRUPT
 }
 {% endhighlight %}
 
@@ -47,7 +46,7 @@ As you may have realized, just by extending `CrudRepository` you get all the bas
 
 ## The Problem
 
-As the time goes on and business start to ask more complicated questions, your repository starts to get weird. Enhancing our previous example to illustrate that results in the following repository code:
+As time goes by and business start to ask more complicated questions, your repository starts to get weird. The following code is an example that illustrates a real world situation I've faced recently:
 
 {% highlight java %}
 public interface CustomerRepository extends CrudRepository<Customer, Integer> {
@@ -73,7 +72,7 @@ Imagine yourself talking to your pair:
 
 Awkward, to say the least.
 
-Another problem that may call your attention is the duplication of criteria among the query methods: most of them are repeating the same filters over and over again. And as the amount of filters increase, the argument list also increases making it more difficult to figure out what is what.
+Another problem that may call your attention is the duplication of criteria among the query methods: most of them are repeating the same filters over and over again. And as the amount of filters increases, the argument list also increases making it more difficult to figure out what is what.
 
 Wouldn’t that be great if we could extract those filters in smaller reusable pieces?
 
@@ -110,7 +109,7 @@ public interface CustomerRepository extends CrudRepository<Customer, Integer>, J
   }
 {% endhighlight %}
 
-As you can see in the new version of the repository, we had to extend `JpaSpecificationExecutor`. That makes it possible for our repository to accept `Specification` based queries using the following method:
+As you can see in this new version we had to extend `JpaSpecificationExecutor`. That makes it possible for our repository to accept `Specification` based queries using the following method:
 
 {% highlight java %}
 List<T> findAll(Specification<T> spec, Sort sort);
@@ -118,7 +117,7 @@ List<T> findAll(Specification<T> spec, Sort sort);
 
 After that,  we've implemented each of the necessary filters and sorting as static methods and got rid of all the old long-named methods. The inner `Specifications` class works as a namespace just to avoid Spring Data trying to interpret our filters as regular `CrudRepository` methods.
 
-Without getting too deep in details about `root`, `query`, `cb` (criteria builder), what our new methods do is to return reusable specifications. And that should be enough to allow us to replace calls for
+Without getting too deep in details about `root`, `query`, `cb` (criteria builder), what our new methods do is to return reusable specifications. And that should be enough to allow us to replace calls to
 
 {% highlight bash %}
 findByFirstNameAndLastNameAndBirthDateIsLessThanAndStatusInOrderByEnrollmentDesc
