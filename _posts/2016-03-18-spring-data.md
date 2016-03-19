@@ -46,7 +46,7 @@ As you may have realized, just by extending `CrudRepository` you get all the bas
 
 ## The Problem
 
-As time goes by and business start to ask more complicated questions, your repository starts to get weird. The following code is an example that illustrates a real world situation I've faced recently:
+As time goes by and business starts to ask more complicated questions, your repository starts to get weird. The following code is an example that illustrates a real world situation I've faced recently:
 
 {% highlight java %}
 public interface CustomerRepository extends CrudRepository<Customer, Integer> {
