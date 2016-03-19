@@ -78,7 +78,7 @@ Wouldn’t that be great if we could extract those filters in smaller reusable p
 
 ## JPA Specifications
 
-With the Spring Data [JPA Specifications](http://bit.ly/1KV77Ee) API we can implement this idea of extracting all filter and sorting criteria in independent pieces. Let’s see the new version of the the repository looks like:
+With the Spring Data [JPA Specifications](http://bit.ly/1KV77Ee) API we can implement this idea of extracting all filter and sorting criteria in independent pieces. Let’s see how the new version of the the repository looks like:
 
 {% highlight java %}
 public interface CustomerRepository extends CrudRepository<Customer, Integer>, JpaSpecificationExecutor<Customer> {
