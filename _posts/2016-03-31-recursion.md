@@ -15,13 +15,13 @@ blog: true
     alt="The Little Schemer book cover">
 </div>
 
-Although this might seen like just a book about [Scheme](https://en.wikipedia.org/wiki/Scheme_%28programming_language%29), I'd say this is mostly a book about **thinking recursively**. Based entirely on questions, puzzles, and exercises which guide you gradually from the most basic concepts, like *atoms* and *s-expressions*, to the most mind-blowing ones, like the [Y Combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator#Y_combinator), the **teaching method** is quite engaging and very unusual when compared to traditional programming books.
+Although this might seen like just a book about [Scheme](https://en.wikipedia.org/wiki/Scheme_%28programming_language%29), I'd say this is mostly a book about **thinking recursively**. Based entirely on questions, puzzles, and exercises which guide you gradually from the most basic concepts, like *atoms* and *s-expressions*, to the most mind-blowing ones, like the [Y Combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator#Y_combinator), the teaching method is quite engaging and very unusual when compared to traditional programming books.
 
 The Little Schemer seems to be a popular book among **Clojure** developers like my friend [Marcos](http://www.marcosccm.io/posts/the-little-schemer). Even though there are idiomatic differences to Scheme, it is totally possible to implement all the exercises in the book using Clojure. Here is my test-driven version: [github.com/vvgomes/little-schemer](https://github.com/vvgomes/little-schemer)
 
 ## The Y Combinator
 
-By far, the most difficult challenge in the book is the [Y Combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator#Y_combinator). In summary, the goal of this function is to describe recursion formally using [Lambda Calculus](https://en.wikipedia.org/wiki/Lambda_calculus) theory, which pretty much means *anonymous functions*. In the example given in the book, we move from a traditional recursive function definition like this:
+By far, the most difficult challenge in the book is the [Y Combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator#Y_combinator). In summary, the goal is to describe recursion formally using [Lambda Calculus](https://en.wikipedia.org/wiki/Lambda_calculus) theory, which in practice means pretty much defining recursive functions with *anonymous functions* only. In the example given in the book we move from a traditional recursive function definition like this:
 
 {% highlight clojure %}
 (def length
@@ -48,8 +48,8 @@ By far, the most difficult challenge in the book is the [Y Combinator](https://e
           :else (add1 (length (cdr l))))))))
 {% endhighlight %}
 
-There are around 17 steps involved to get from the initial to the final stage (you can see all the steps [here](https://github.com/vvgomes/little-schemer/blob/master/src/little_schemer/chapter09.clj)) and you usually don’t get it in the first time. Not even in the second one. However, if after the third time you read the Y Combinator chapter you still don’t get it, I’d recommend you to take a look at this [very good explanation](http://www.infoq.com/presentations/Y-Combinator) by Jim Weirich and then try again.
+There are around 17 steps involved to get from the initial to the final stage (you can see all the steps [here](https://github.com/vvgomes/little-schemer/blob/master/src/little_schemer/chapter09.clj)) and you usually don’t get it in the first time. Not even in the second one. However, if after the third time you still don’t get it, I’d recommend you to take a look at this [very good explanation](http://www.infoq.com/presentations/Y-Combinator) by Jim Weirich and try again. That's what I did.
 
-> **Does your hat still fit?**
+> Does your hat still fit?
 >
 > Perhaps not after such a mind stretcher.
