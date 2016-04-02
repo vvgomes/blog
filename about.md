@@ -17,3 +17,9 @@ I was born and raised in the south of Brazil and I’m currently living and work
 
 Feel free to [send me a message](mailto:me@vvgomes.com) anytime.
 
+## More
+
+- Presentations - [speakerdeck.com/vvgomes](https://speakerdeck.com/vvgomes)
+- Music - [soundcloud.com/vvgomes](https://soundcloud.com/vvgomes) (Yes, I'm song writter.)
+- Videos - [vimeo.com/vvgomes](https://vimeo.com/vvgomes)
+
