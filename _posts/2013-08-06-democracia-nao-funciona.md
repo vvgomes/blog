@@ -3,7 +3,6 @@ title: Democracia Não Funciona
 layout: post
 date: 2013-08-06 22:48
 tag:
-- people
 - society
 blog: true
 ---

@@ -4,7 +4,7 @@ layout: post
 date: 2015-09-03 22:48
 tag:
 - javascript
-- functional-programming
+- fp
 blog: true
 ---
 

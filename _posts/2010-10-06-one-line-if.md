@@ -4,7 +4,6 @@ layout: post
 date: 2010-10-06 22:48
 tag:
 - javascript
-- programming
 blog: true
 ---
 

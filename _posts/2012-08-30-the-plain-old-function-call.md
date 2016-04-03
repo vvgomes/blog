@@ -4,7 +4,6 @@ layout: post
 date: 2012-08-30 22:48
 tag:
 - ruby
-- programming
 blog: true
 ---
 

@@ -3,7 +3,6 @@ title: Clojure Flip
 layout: post
 date: 2016-02-08 22:48
 tag:
-- functional-programming
 - clojure
 blog: true
 ---

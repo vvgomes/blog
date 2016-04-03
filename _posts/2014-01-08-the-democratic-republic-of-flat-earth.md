@@ -3,7 +3,6 @@ title: The Democratic Republic of Flat Earth
 layout: post
 date: 2014-01-08 22:48
 tag:
-- people
 - society
 blog: true
 ---

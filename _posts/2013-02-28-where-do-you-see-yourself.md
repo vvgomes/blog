@@ -4,7 +4,6 @@ layout: post
 date: 2013-02-28 22:48
 tag:
 - people
-- career
 blog: true
 ---
 

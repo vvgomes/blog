@@ -3,6 +3,7 @@ title: "The Beauty of Recursion"
 layout: post
 date: 2016-03-31 11:00
 tag:
+- fp
 - clojure
 blog: true
 ---
