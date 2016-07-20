@@ -1,5 +1,5 @@
 ---
-title: "Spring Data Repositories Considered Awkward"
+title: "Better Spring Data Repositories"
 layout: post
 date: 2016-03-18 11:00
 tag:
