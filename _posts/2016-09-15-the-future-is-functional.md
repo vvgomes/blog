@@ -8,13 +8,13 @@ tag:
 blog: true
 ---
 
-This week my friend [@ffafara](https://twitter.com/ffafara) and I joined a meetup organized by the [Philadelphia Java Users Group](https://www.meetup.com/PhillyJUG/events/231548149). There was a presentation about some interesting details on Java SE 8 and also some highlights on what's coming up in version 9. The discussion was interesting, specially regarding the Functional Programming features like lambdas, functional interfaces, streams, and optionals.
+This week my friend [@ffafara](https://twitter.com/ffafara) and I joined a meetup organized by the [Philadelphia Java Users Group](https://www.meetup.com/PhillyJUG/events/231548149). There was a presentation about some interesting details on Java SE 8 and also some highlights on what's coming up in version 9. The discussion was quite nice, specially regarding the Functional Programming features like lambdas, functional interfaces, streams, and optionals.
 
-One thing called our attention though: the presenter's opinion about the relevance of FP concepts in the future of the mainstream programming. Although he highlighted the potential benefits of those in the context of Java, he does **not** believe FP could be a replacement to the Object Oriented mindset when it comes to general application development.
+One thing called our attention though: the presenter's opinion about the relevance of FP concepts in the future of mainstream programming. Although he highlighted the potential benefits of those concepts in the context of Java, he does **not** believe FP could be a replacement for the Object Oriented mindset when it comes to general application development.
 
-This point of view, though, is not at all a rare one. It's quite frequent to observe people being averse to FP (usually, influenced by old-fashioned [software architects](http://www.martinfowler.com/articles/designDead.html#DoYouWannaBeAnArchitectWhenYouGrowUp)), not only due to the intellectual pain of the paradigm shift, but mainly because they still believe OO is the primary tool for building systems.
+This point of view, though, is not at all a rare one. It's quite frequent to observe people being averse to FP (usually, influenced by old-fashioned [software architects](http://www.martinfowler.com/articles/designDead.html#DoYouWannaBeAnArchitectWhenYouGrowUp)), not only due to the intellectual pain of the paradigm shift, but mainly because they still believe OO should be the primary tool for building systems.
 
-It seems to me they are really missing an important point here.
+Well, it seems they are missing an important point here.
 
 What they probably don't yet realize is that OO is the fundamental reason behind most of the pain points in their daily programming routine:
 
@@ -37,7 +37,7 @@ In a world every day more distributed and asynchronous those inconveniences are 
 
 > Clearly, if the value of a memory location, once initialized, does not change during the course of a program execution, then there's nothing for the 131072 processors to compete over. So that's the big deal about functional languages; and it is one big fricking deal.
 
-Of course OO is still a good choice for most of the single threaded applications. However, in a world becoming every day more dependent on [event-driven](https://vimeo.com/131636650), asynchronous, and distributed systems, the insistence on the OO supremacy has been leading to fragile systems which are hard to test, debug, and extend. FP, on the other hand, fits perfectly the requirements of that scenario. That's why we've been observing an increasing focus on FP languages, libraries, and tools by big tech companies like Facebook. Although FP might be challenging to learn in the beginning, the passionate programmer most definitely finds it a fascinating and beautiful concept, which is, above everything else, **powerful**.
+Of course OO is still a good choice for most single threaded applications. However, in a world every day more and more [event-driven](https://vimeo.com/131636650), asynchronous, and distributed, the insistence on the OO supremacy has been leading to fragile systems which are hard to test, debug, and extend. FP, on the other hand, fits perfectly the requirements of that scenario. That's why we've been observing an increasing focus on FP languages, libraries, and tools by big tech companies like Facebook for instance. Although FP might be challenging to learn in the beginning, the passionate programmer most definitely finds it a fascinating and beautiful concept, which is, above everything else, **powerful**.
 
 I'll leave you with Uncle Bob again:
 
