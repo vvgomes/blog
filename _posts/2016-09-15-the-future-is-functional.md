@@ -16,7 +16,7 @@ This point of view, though, is not at all a rare one. It's quite frequent to obs
 
 Well, it seems they are missing an important point here.
 
-What they probably don't yet realize is that OO is the fundamental reason behind most of the pain points in their daily programming routine:
+What they probably don't yet realize is that OO itself is the fundamental reason behind most of the pain points in their daily programming routine:
 
 - Null pointers every now and then;
 - Unpredictable side effects;
