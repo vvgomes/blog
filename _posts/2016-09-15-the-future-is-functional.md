@@ -1,5 +1,5 @@
 ---
-title: "The Future Is Functional"
+title: "The Future is Functional"
 layout: post
 date: 2016-09-15 01:48
 tag:
