@@ -51,7 +51,7 @@ The algorithm of the reducer we just saw can be described as:
 - Then, it executes the matching behavior returning a new state;
 - In case there is no match, it returns the unchanged state.
 
-Turns out that logic can be accuratelly implemented using a [Maybe](https://wiki.haskell.org/Maybe) container, as the Haskell programmers would probably suggest here. Java 8 developers can think of it as an [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html). In Javascript, we can get Maybe from the amazing [Folktalke](http://folktalegithubio.readthedocs.io/en/latest/api/data/maybe/Maybe.html?highlight=maybe) lib. Let's see the result.
+Turns out that logic can be accuratelly implemented using a [Maybe](https://wiki.haskell.org/Maybe) container, as the Haskell programmers would probably suggest here. Java 8 developers can think of it as an [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html). In Javascript, we can get Maybe from the amazing [Folktale](http://folktalegithubio.readthedocs.io/en/latest/api/data/maybe/Maybe.html?highlight=maybe) lib. Let's see the result.
 
 {% highlight javascript %}
 import Maybe from "data.maybe";
