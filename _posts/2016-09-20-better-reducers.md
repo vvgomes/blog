@@ -11,7 +11,7 @@ blog: true
 
 [Redux](http://redux.js.org/) is one of them most elegant ideas in the Javascript ecosystem in the last few years. Inspired by Facebook's [Flux](https://facebook.github.io/flux/) architecture, this small but brave library helps you to build applications based primarily on immutable data structures and pure functions. Folks with bias on Functional Programming (like me) will feel at home with Redux.
 
-> In summary, a Redux app is a container for a immutable data structure representing the **current state**. That container accepts **actions** which are just plain objects representing user intent. Once an action is accepted, a **reducer** function runs and creates the **next state** based on the action and the current state. The reducer function then is the core of a Redux app.
+> In summary, a Redux app is a container for a immutable data structure representing the **current state**. That container accepts **actions** which are just plain objects describing user intent. Once an action is accepted, a **reducer** function runs and creates the **next state** based on the action and the current state. The reducer function then is the core of a Redux app.
 
 ## The Reducer
 
