@@ -41,17 +41,17 @@ function reducer (state = [], action) {
 }
 {% endhighlight %}
 
-The example above is literally the suggested reducer in the official Redux docs. I wonder if people are really following this approach (I hope not). As you can see, the code above is very busy to read and not very modular. Hopefully, we can do better than that. Let's see.
+This is literally the reducer suggested in the Redux official docs. I wonder if people are really following this approach (I hope not). As you can see, the code above is very busy to read and not at all modular. Hopefully, we can do better than that. Let's see.
 
 ## Introducing Maybe
 
-The algorithm of the reducer above can be described as:
+The algorithm of the reducer we just saw can be described as:
 
-- Chooses a behavior by pattern-matching the `action.type`;
-- Executes the matching behavior returning a new state;
-- Returns the unchanged state if no match.
+- It chooses a behavior by pattern-matching the `action.type`;
+- Then, it executes the matching behavior returning a new state;
+- In case there is no match, it returns the unchanged state.
 
-Turns out that logic can be accuratelly implemented using a [Maybe](https://wiki.haskell.org/Maybe) container, as the Haskell programmers would probably suggest here. In Javascript, we can use the Maybe object from the amazing [Folktalke](http://folktalegithubio.readthedocs.io/en/latest/api/data/maybe/Maybe.html?highlight=maybe) lib. Let's see the result.
+Turns out that logic can be accuratelly implemented using a [Maybe](https://wiki.haskell.org/Maybe) container, as the Haskell programmers would probably suggest here. Java 8 developers can think of it as a [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html). In Javascript, we can get Maybe from the amazing [Folktalke](http://folktalegithubio.readthedocs.io/en/latest/api/data/maybe/Maybe.html?highlight=maybe) lib. Let's see the result.
 
 {% highlight javascript %}
 import Maybe from "data.maybe";
@@ -63,7 +63,7 @@ const reducer = (state, action) =>
     .getOrElse(state);
 {% endhighlight %}
 
-The Maybe version of our reducer relies on an addional step: we extracted all the action-specific behaviors to a map. We called it `actionHandlers`.
+The Maybe version of our reducer relies on an addional step: we extracted all the action-specific behaviors to separate functions, which are accessible in a map we called `actionHandlers`.
 
 {% highlight javascript %}
 const ADD_TODO = (state, action) =>
@@ -78,6 +78,8 @@ const actionHandlers = { ADD_TODO, TOGGLE_TODO };
 {% endhighlight %}
 
 Now each action handler is an independent function with a single and succint responsibility. The same applies for the reducer which uses the Maybe container to drive the logic around the pattern matching. And just that.
+
+Those who are not familiar with Maybe can think of it as a container for a value that might or might not be present. In our example, an action type might or might not be found in the map. The `.fromNullable` constructor does that for us: it gets an actual function or it gets nothing in case there is no match. Next, we call `.map` which executes a present behavior. The interesting thing about `.map` is that is does not run in case the Maybe is holding an empty value. The last call `.getOrElse` returns the value from inside the container if the value is present. Otherwise, it uses the default argument, which in our case is the unchanged `stat`e`.
 
 ## Conclusion
 
