@@ -41,15 +41,15 @@ function reducer (state = [], action) {
 }
 {% endhighlight %}
 
-The example above is literally the suggested reducer in the official Redux docs. I wonder if people are really following this approach. I hope not. As you can see the code above is very busy to read and not very modular. Hopefully, we can do better than that. Let's see.
+The example above is literally the suggested reducer in the official Redux docs. I wonder if people are really following this approach (I hope not). As you can see, the code above is very busy to read and not very modular. Hopefully, we can do better than that. Let's see.
 
 ## Introducing Maybe
 
-The behavior of the reducer above can be described as:
+The algorithm of the reducer above can be described as:
 
-- Pattern match an action by `type`;
-- Handles the action with the appropriate behavior;
-- Returns the unchanged `state` if no match.
+- Chooses a behavior by pattern-matching the `action.type`;
+- Executes the matching behavior returning a new state;
+- Returns the unchanged state if no match.
 
 Turns out that logic can be accuratelly implemented using a [Maybe](https://wiki.haskell.org/Maybe) container, as the Haskell programmers would probably suggest here. In Javascript, we can use the Maybe object from the amazing [Folktalke](http://folktalegithubio.readthedocs.io/en/latest/api/data/maybe/Maybe.html?highlight=maybe) lib. Let's see the result.
 
@@ -81,5 +81,5 @@ Now each action handler is an independent function with a single and succint res
 
 ## Conclusion
 
-Redux is so useful not only because it is so simple and concise but also because it is based on strong Functional Programming concepts. Additionally, Maybes, Eithers, Validations and other containers from [Folktale](http://folktalejs.org/) are very handy in a diversity of situations, but specially useful when it comes to [functional error handling](http://robotlolita.me/2013/12/08/a-monad-in-practicality-first-class-failures.html). The reducer example is just a small demonstration on how well the Redux idea fits well with other FP based libs. For a complete and more detailed example take a look at my Redux + Folktale + Ramda [Todo App](https://github.com/vvgomes/redux-todo/).
+Redux is great not only because it is so simple and concise but also because it is based on strong Functional Programming concepts. Additionally, Maybes, Eithers, Validations and other containers from [Folktale](http://folktalejs.org/) are very handy in a diversity of situations, but specially useful when it comes to [functional error handling](http://robotlolita.me/2013/12/08/a-monad-in-practicality-first-class-failures.html). The reducer example is just a small demonstration on how well the Redux idea fits well with other FP based libs. For a complete and more detailed example take a look at my Redux + Folktale + Ramda [Todo App](https://github.com/vvgomes/redux-todo/).
 
