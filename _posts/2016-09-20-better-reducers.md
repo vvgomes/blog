@@ -85,3 +85,7 @@ Those who are not familiar with Maybe can think of it as a container for a value
 
 Redux is great not only because it is so simple and concise but also because it is based on strong Functional Programming concepts. Additionally, Maybes, Eithers, Validations and other containers from [Folktale](http://folktalejs.org/) are very handy in a diversity of situations, but specially useful when it comes to [functional error handling](http://robotlolita.me/2013/12/08/a-monad-in-practicality-first-class-failures.html). The reducer example is just a small demonstration on how well the Redux idea fits with other FP based libs. For a complete and more detailed example take a look at my Redux + Folktale + Ramda [Todo App](https://github.com/vvgomes/redux-todo/).
 
+### Update
+
+The idea behind this post inspired the development of the [Redux Definer](https://www.npmjs.com/package/redux-definer) NPM package. Pretty handy to avoid reducer boilerplate code. In case you also want to avoid action creators boilerplate, you can go straight to [Redux Actions](https://www.npmjs.com/package/redux-actions).
+
