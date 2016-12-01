@@ -85,7 +85,7 @@ And those are just a few examples. It's clearly not a good idea to setup expecta
 Another perspective on decentralized leadership is the idea of [Feature Leads](http://bit.ly/25DYN2a) (initially proposed by Pat Kua, and also discussed by my colleague [Ryan Oglesby](http://ryanogles.by/agile/teams/2016/01/23/youre-a-champion.html)). In that approach, the technical leadership is broken down into slices of related functionality and/or ortogonal aspects of the system in development. It helps to minimize the risks by decentralizing leadership activities in multiple individuals.
 
 ![Feature Leads](/assets/images/feature-leads.jpg)
-<figcaption>Slicing the backlog by Feature Leads</figcaption>
+<figcaption>Slicing the backlog and stakeholders by Feature Leads</figcaption>
 
 ## Conclusion
 
