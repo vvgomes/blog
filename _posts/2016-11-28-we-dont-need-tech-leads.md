@@ -89,6 +89,6 @@ Another perspective on decentralized leadership is the idea of [Feature Leads](h
 
 ## Conclusion
 
-So, do we really need a tech lead? - Maybe yes when the conditions are not ideal. But the tech lead almost certainly won't be able to just turn the conditions into ideal. Teams operating in suboptimal circumstances in general have *broken windows* and blockers to be addressed. Many times you will find in [XP values](http://www.extremeprogramming.org/values.html) the exact answers your team is looking for. Besides that, there is no silver bullet if you are not able to find the right people to work with you, so recruiting plays a big part here.
+So, do we really need a tech lead? - Maybe yes when the conditions are not ideal. But the tech lead almost certainly won't be able to just turn the conditions into ideal. Teams operating in suboptimal circumstances in general have *broken windows* and blockers to be addressed. Many times you will find in [XP Values](http://www.extremeprogramming.org/values.html) the exact answers your team is looking for. Besides that, there is no silver bullet if you are not able to find the right people to work with you, so recruiting plays a big part here.
 
 Overall, assigning a full-time tech lead in a team is risky and can potentially make things worse. Healthy and productive software teams most probably do not need a tech lead.
