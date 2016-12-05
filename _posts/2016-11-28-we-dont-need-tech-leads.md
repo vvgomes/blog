@@ -26,7 +26,7 @@ Pat Kua wrote an [article](https://www.thekua.com/atwork/2014/10/do-we-need-a-te
 Based on my observations and personal experience, I tend to disagree with that point of view in two ways: 
 
 1. Well functioning teams in which people share responsibilities **are not rare**.
-2. When a team is **not** functioning well, assigning a tech lead **can potentially** make it worse.
+2. When a team is **not** functioning well, assigning a tech lead can potentially **make it worse**.
 
 ## Is the Tech Lead a workaround?
 
