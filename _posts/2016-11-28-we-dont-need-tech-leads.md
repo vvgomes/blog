@@ -78,7 +78,7 @@ In a recent [interview](http://www.se-radio.net/2016/03/se-radio-episode-253-fre
 - When there are architectural challenges, we need an experienced *architect*.
 - When there are internal conflicts, we need a *mediator*.
 - When there are external blockers or lack of resources, we need a *concierge*.
-- When we need to negotiate and integrate with other teams, we need a *ambassador*.
+- When we need to negotiate and integrate with other teams, we need an *ambassador*.
 
 And those are just a few examples. It's clearly not a good idea to setup expectations regarding all those capabilities on a single person (the tech lead). On the other hand, it seems more reasonable to build a team of people with complementary capabilities who can function effectively together.
 
