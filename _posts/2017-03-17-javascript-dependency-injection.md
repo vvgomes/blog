@@ -10,6 +10,8 @@ blog: true
 
 If you like to develop your Javascript applications in a functional style, often times you have to deal with [Dependency Injection](https://martinfowler.com/articles/injection.html#FormsOfDependencyInjection) when it comes to unit-test functions that depend on other functions. Fortunately, with ES6 [default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) DI becomes quite simple. Let’s see an example.
 
+## Example: An API Client
+
 Most client applications need to communicate with a remote server, So let’s build a simple API client module with a few functions. The end goal looks like this:
 
 {% highlight javascript %}
@@ -36,9 +38,9 @@ apiClient
 
 Our client is just a namespace of functions, each representing a different HTTP request to a remote server. To send the actual request we intend to use [fetch](https://github.com/matthew-andrews/isomorphic-fetch) which returns a Promise wrapping the response. So the `fetch` function will be our dependency.
 
-## Testing
+## Starting With Tests
 
-Let’s write a few unit test cases to drive the development of our functions. In order  to test them in isolation we need to inject a fake `fetch` function.
+Let’s write a few unit test cases to drive the development of our functions. In order  to test them in isolation we need to inject a fake `fetch` function as we don't want to exercise the real HTTP requests.
 
 {% highlight javascript %}
 // test/api.client.test.js
@@ -78,7 +80,7 @@ describe("api client", () => {
 });
 {% endhighlight %}
 
-We stubbed `fetch` to return an arbitrary response and passed as an argument to `fetchTodos`. That can be implemented with a ES6 default parameter.
+We stubbed `fetch` to return an arbitrary response and passed as an argument to `fetchTodos`. That can be implemented as a default parameter.
 
 {% highlight javascript %}
 // lib/api.client.js
@@ -221,7 +223,7 @@ describe("api client", () => {
 });
 {% endhighlight %}
 
-As you can see in the new version of the tests, we're now injecting `fakeFetch` to `createApiClient`. That new function acts like a contructor: it builds the namespace and make the injected `fetch` implemantion available to the entire namespace scope.
+As you can see in the new version of the tests, we're now injecting `fakeFetch` to `createApiClient`. That new function acts like a contructor: it builds the namespace and make the injected `fetch` implemantion available to the entire namespace scope. Let's wrap the namespace implementation with the constructor function.
 
 {% highlight javascript %}
 // lib/api.client.js
@@ -241,6 +243,8 @@ const createApiClient = (fetch = defaultFetch) => ({
 
 export default createApiClient;
 {% endhighlight %}
+
+And that's it. We are now able to add more functions to this namespace (like `toggleTodo`, for instance) and have the `fetch` dependency available and stubbable.
 
 ## Conclusion
 
