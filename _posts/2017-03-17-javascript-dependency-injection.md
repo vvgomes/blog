@@ -36,7 +36,7 @@ apiClient
 //=> [ { id: "1", text: "wash dishes", done: false } ]
 {% endhighlight %}
 
-Our client is just a namespace of functions, each representing a different HTTP request to a remote server. To send the actual request we intend to use [fetch](https://github.com/matthew-andrews/isomorphic-fetch) which returns a Promise wrapping the response. So the `fetch` function will be our dependency.
+Our client is just a namespace of functions, each one representing a different HTTP request to a remote server. To send the actual request we intend to use [fetch](https://github.com/matthew-andrews/isomorphic-fetch) which returns a Promise wrapping the response. So the `fetch` function will be our dependency.
 
 ## Starting With Tests
 
@@ -223,7 +223,7 @@ describe("api client", () => {
 });
 {% endhighlight %}
 
-As you can see in the new version of the tests, we're now injecting `fakeFetch` to `createApiClient`. That new function acts like a contructor: it builds the namespace and make the injected `fetch` implemantion available to the entire namespace scope. Let's wrap the namespace implementation with the constructor function.
+As you can see in the new version of the tests, we're now injecting `fakeFetch` to `createApiClient`. That new function acts like a contructor: it builds the namespace and make the injected `fetch` available to the entire namespace scope. Let's make that change to the application code.
 
 {% highlight javascript %}
 // lib/api.client.js
@@ -244,14 +244,39 @@ const createApiClient = (fetch = defaultFetch) => ({
 export default createApiClient;
 {% endhighlight %}
 
-And that's it. We are now able to add more functions to this namespace (like `toggleTodo`, for instance) and have the `fetch` dependency available and stubbable.
+With the refactoring above, our initial code sniped will have to change a little bit. Now we have to call first `createApiClient` instead of just importing all functions.
+
+{% highlight javascript %}
+// an usual TODO app...
+
+import createApiClient from "./lib/api.client";
+const apiClient = createApiClient();
+
+apiClient
+  .addTodo({ text: "wash dishes" })
+  .then(todo => console.log("New todo added:", todo))
+  .catch(errors => console.log("Something went wrong:", errors));
+
+//=> New todo added: { id: "1", text: "wash dishes", done: false }
+
+// ...
+
+apiClient
+  .fetchTodos()
+  .then(todos => console.log(todos))
+  .catch(errors => console.log("Something went wrong:", errors));
+
+//=> [ { id: "1", text: "wash dishes", done: false } ]
+{% endhighlight %}
+
+The code above represent a sample usage of our module. Notice that the calling code doesn't have to pass `fetch` to `createApiClient` since we used a default parameter. Besides that, we are now able to add more functions to the module (like `toggleTodo`, for instance) and have `fetch` available to them.
 
 ## Conclusion
 
 ES6 default parameters enable functional DI in simple and elegant way. The approach demonstrated in this post suggests a new point of view on function arguments:
 
-- **Mandatory arguments** - the arguments which matter to the application code.
-- **Dependencies** - collaborator functions defaulting to the real implementation and being stubbed in unit tests.
+- **The regular arguments** - the arguments which matter to the application code.
+- **Dependencies** - collaborator functions defaulting to the real implementation and stubbed in unit tests.
 
 Check out the complete example code at [github.com/vvgomes/es6-di-example](https://github.com/vvgomes/es6-di-example).
 
