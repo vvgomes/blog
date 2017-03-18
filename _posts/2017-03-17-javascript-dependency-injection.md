@@ -244,7 +244,7 @@ const createApiClient = (fetch = defaultFetch) => ({
 export default createApiClient;
 {% endhighlight %}
 
-With the refactoring above, our initial code sniped will have to change a little bit. Now we have to call first `createApiClient` instead of just importing all functions.
+With the refactoring above, our initial code snippet will have to change a little bit. Now we have to call first `createApiClient` instead of just importing all functions.
 
 {% highlight javascript %}
 // an usual TODO app...
