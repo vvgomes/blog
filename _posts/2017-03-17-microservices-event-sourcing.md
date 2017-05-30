@@ -52,3 +52,11 @@ When it comes to integrating event-driven applications with non-event-driven (in
 <div style="text-align:center">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/4cJ4GyyOfII" frameborder="0" allowfullscreen></iframe>
 </div>
+
+## Next Presentations
+
+I'll be talking about this topic again soon in two more conferences:
+
+- 6/21 [Developer Week NYC](http://www.developerweek.com/NYC/conference/speakers/)
+- 6/26 [QCon New York](https://qconnewyork.com/ny2017/users/vinicius-gomes)
+
