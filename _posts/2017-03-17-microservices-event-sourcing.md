@@ -21,7 +21,7 @@ After the successful release of the first few products in production running on 
 
 ## Frequently Asked Questions
 
-Many people came to me and to people from my team with question about this architectural style. Here are the most popular ones:
+Many people came to me and to people from my team with questions about this architectural style. Here are the most popular ones:
 
 ### How should clients deal with Eventual Consistency?
 
