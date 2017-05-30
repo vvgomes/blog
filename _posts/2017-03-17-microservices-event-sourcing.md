@@ -33,7 +33,7 @@ A possible answer for that question can be the separation between the **command 
 2. **Websockets** - the client passivelly waits for the server to send the data back through a websocket connection.
 3. **Optimistic Rendering** - based on a successful command execution, the client can optimistically render the results without actually querying the backend.
 
-In fact, our experience shows that in the vast majority of the cases the data will be available for querying pretty much at the same time as the command request is done, which means that the client wil mostly be able to just query the data right after it is done sending the command. Anyway, in case you know about alternative options to deal with Eventual Consistency from the client side please let me know.
+In fact, our experience shows that in the vast majority of the cases the data will be available for querying pretty much at the same time as the command request is done, which means that the client will mostly be able to just query the data right after it is done sending the command. Anyway, in case you know about alternative options to deal with Eventual Consistency from the client side please let me know.
 
 ### How do you deal with changes in the event payload structure?
 
