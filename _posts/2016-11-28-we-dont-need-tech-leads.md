@@ -42,7 +42,7 @@ Well, in a situation like that, what we probably need is a **mediator**. And tha
 
 ## Does the Tech Lead make it worse?
 
-About [four years ago](vvgomes.com/more-testing-less-testers/), I wrote about the importance of people exercising different skill-sets and playing multiple roles in a team.
+About [four years ago](http://vvgomes.com/more-testing-less-testers), I wrote about the importance of people exercising different skill-sets and playing multiple roles in a team.
 
 > The most successful teams I’ve seen share the fact that people are multi-functional and self-managed, in a sense that every single member would be actively involved in a) helping the business to figure out and define requirements, b) directly work on the development of features, and c) directly work on testing related activities.
 
