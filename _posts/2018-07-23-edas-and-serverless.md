@@ -23,7 +23,7 @@ An EDA is a distributed system where the communication between the functional co
   <figcaption>Elements of an EDA</figcaption>
 </div>
 
-There are [different flavors](https://martinfowler.com/tags/event%20architectures.html) of Event Driven Architectures. The one I’d like to focus on is based on [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html) (ES) and [Command Query Responsibility Segregation](https://martinfowler.com/bliki/CQRS.html) (CQRS).
+There are [different flavors](https://martinfowler.com/tags/event%20architectures.html) of Event Driven Architectures, but the one I’d like to focus on is based on [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html) (ES) and [Command Query Responsibility Segregation](https://martinfowler.com/bliki/CQRS.html) (CQRS).
 
 Essentially, a CQRS application has two separate data models: *Command* (writes) and *Query* (reads). Although both models are part of the same bounded-context they are independent and communicate implicitly through the Event Bus. The Command side holds the event-sourced state of the application while the Query side maintains an aggregated projection of that state.
 
@@ -83,27 +83,27 @@ Moving further, we can apply the CQRS/ES pattern when modeling services as funct
   <figcaption style="margin-top:40px">Internal structure of a Serverless ES/CQRS application</figcaption>
 </div>
 
-The red line in the diagram represent new data being written; the green lines represent existing data being read. Similarly to the non-serverless version, we also have the Command side on the top (*Commands*, *Event Store*, *Event Publisher*) and the Query side on the bottom (*Event Listener 1/n*, *Query DB*, *Queries*) as well as an Event Bus.
+The red lines on the diagram represent new data being written; the green lines represent existing data being read. Similarly to the non-serverless version, we also have the Command side on the top (*Commands*, *Event Store*, *Event Publisher*) and the Query side on the bottom (*Event Listener 1/n*, *Query DB*, *Queries*) as well as an Event Bus.
 
-As you can see in the diagram, our service is composed by 5 functions and 4 BaaS components described below.
+As you may have noticed, our service is composed by 5 functions and 4 BaaS components described below.
 * The **API Gateway** represents the entry point for both command and query requests.
-* Both the **Event Store** and the **Query DB** are created using DynamoDB.
-* The **Event Bus** is an SNS Topic.
+* Both the **Event Store** and the **Query DB** are implemented with DynamoDB.
+* The **Event Bus** is implemented as a set of SNS topics.
 
-As far as the data flow goes, you basically have a *Commands* function handling incoming command requests and inserting new domain events to the store. Those new events would be broadcasted by the *Event Publisher* function to the bus. All consumers are notified and - asynchronously - would update the query projections on the *Query DB*. The last *Queries* function simply responds to incoming queries.
+As far as the data flow goes, we basically have a *Commands* function handling incoming command requests and inserting new domain events to the store. Those new events would be broadcasted by the *Event Publisher* function to the bus. All consumers are notified and - asynchronously - would update the query projections on the *Query DB*. The last *Queries* function simply responds to incoming queries from the *API Gateway*.
 
 Check out a sample implementation of this idea on my Github: [http://gitbub.com/vvgomes/serverless-restaurant]()
 
 ## Concluding Thoughts
 
-Here are a few takeaways I believe are important to keep in mind in case you are considering adopting a Serverless EDA approach.
+Here are a few takeaways I believe are important to keep in mind in case you are considering to adopt a Serverless EDA approach.
 
 **Cost of operations** - If operations is a significant cost to your organization, moving to the Serverless model can be an interesting financial option, as you’d be able to transfer almost all the server provisioning and configuration management burden to the cloud provider.
 
-**Vendor Lock-in** - On the other hand, once you adopt a cloud provider, you are pretty much restricted to the offerings to that particular provider. For instance: there is no [BigQuery](https://cloud.google.com/bigquery/) in AWS, there is no [RedShift](https://aws.amazon.com/redshift/) in GCP, etc.
+**Vendor Lock-in** - On the other hand, once you adopt a particular cloud provider, you are pretty much restricted to the offerings of that provider. For instance: there is no [BigQuery](https://cloud.google.com/bigquery/) in AWS, there is no [RedShift](https://aws.amazon.com/redshift/) in GCP, etc.
 
-**Customization** - Another point to watch out is the level of customization you’ll need to introduce on infrastructure components in order to support the peculiarities of your problem domain. BaaS solutions are usually not very customization friendly.
+**Customization** - Another point to consider is the level of customization you’ll need to introduce on infrastructure components in order to support the peculiarities of your problem domain. BaaS solutions are usually not very customization-friendly.
 
-**Predictability** - Although the FaaS billing model is pretty interesting for situations where you don’t really know what kind of traffic to expect, for scenarios where the load is reasonably high and constant it is probably cheaper to just keep a few robust IaaS compute engines running permanently rather.
+**Predictability** - Although the FaaS billing model is pretty interesting for situations where you don’t really know what kind of traffic to expect, for scenarios where the load is reasonably high and constant it is probably cheaper to just keep a few robust IaaS compute engines running permanently instead.
 
-**Nature of the problem** - Overall, going Serverless - and even more - going Event-Driven is something that might not be applicable to all problem domains. There are situations where using those patterns just don’t make sense. [There is no silver bullet](https://amzn.to/2NP0MNE).
+**Nature of the problem** - Overall, going Serverless - and even more - going Event-Driven is something that might not be applicable to certain domains. There are situations where using those patterns just doesn't make sense. After all, [there is no silver bullet](https://amzn.to/2NP0MNE).
