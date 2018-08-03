@@ -92,7 +92,7 @@ As you may have noticed, our service is composed by 5 functions and 4 BaaS compo
 
 As far as the data flow goes, we basically have a *Commands* function handling incoming command requests and inserting new domain events to the store. Those new events would be broadcasted by the *Event Publisher* function to the bus. All consumers are notified and - asynchronously - would update the query projections on the *Query DB*. The last *Queries* function simply responds to incoming queries from the *API Gateway*.
 
-Check out a sample implementation of this idea on my Github: [http://gitbub.com/vvgomes/serverless-restaurant]()
+Check out a sample implementation of this idea on my Github: [https://github.com/vvgomes/serverless-restaurant](https://github.com/vvgomes/serverless-restaurant)
 
 ## Concluding Thoughts
 
