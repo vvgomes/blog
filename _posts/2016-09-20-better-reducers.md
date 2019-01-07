@@ -39,6 +39,7 @@ function reducer (state = [], action) {
       return state;
   }
 }
+
 {% endhighlight %}
 
 This is literally the reducer suggested in the Redux official docs. I wonder if people are really following this approach (I hope not). As you can see, the code above is very busy to read and not at all modular. Hopefully, we can do better than that. Let's see.
